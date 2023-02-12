@@ -183,13 +183,85 @@ typedef union {
 	uint32_t TIM9RST 		: 1;
 	uint32_t TIM10RST 		: 1;
 	uint32_t TIM11ST 		: 1;
-	uint32_t reserved 		: 13;
+	uint32_t reserved5 		: 13;
 
  };
 } RCC_APB2RSTR_t;
 
+typedef union {
+	uint32_t RCC_AHB1ENR;
+  struct {
 
+	uint32_t GPIOAEN		: 1;
+	uint32_t GPIOBEN		: 1;
+	uint32_t GPIOCEN		: 1;
+	uint32_t GPIODEN		: 1;
+	uint32_t GPIOEEN		: 1;
+	uint32_t reserved		: 2;
+	uint32_t GPIOHEN		: 1;
+	uint32_t reserved2		: 4;
+	uint32_t CRCEN			: 1;
+	uint32_t reserved3		: 8;
+	uint32_t DMA1EN			: 1;
+	uint32_t DMA2EN			: 1;
+	uint32_t reserved4		: 9;
+ };
+} RCC_AHB1ENR_t;
 
+typedef union {
+	uint32_t RCC_AHB2ENR;
+  struct {
+	uint32_t reserved		: 7;
+	uint32_t OTGFSEN		: 1;
+	uint32_t reserved2		: 24;
+ };
+} RCC_AHB2ENR_t;
+
+typedef union {
+	uint32_t RCC_APB1ENR;
+  struct {
+	uint32_t TIM2EN 		: 1;
+	uint32_t TIM3EN 		: 1;
+	uint32_t TIM4EN 		: 1;
+	uint32_t TIM5EN 		: 1;
+	uint32_t reserved 		: 7;
+	uint32_t WWDEN 			: 1;
+	uint32_t reserved2 		: 2;
+	uint32_t SPI2EN 		: 1;
+	uint32_t SPI3EN 		: 1;
+	uint32_t reserved3 		: 1;
+	uint32_t USART2EN 		: 1;
+	uint32_t reserved4 		: 3;
+	uint32_t I2C1EN 		: 1;
+	uint32_t I2C2EN 		: 1;
+	uint32_t I2C3EN 		: 1;
+	uint32_t reserved5 		: 4;
+	uint32_t PWREN	 		: 1;
+	uint32_t reserved6 		: 3;
+ };
+} RCC_APB1ENR_t;
+
+typedef union {
+	uint32_t RCC_APB2EN;
+  struct {
+	uint32_t TIM1EN 		: 1;
+	uint32_t reserved 		: 3;
+	uint32_t USART1EN 		: 1;
+	uint32_t USART6EN 		: 1;
+	uint32_t reserved2 		: 2;
+	uint32_t ADC1EN 		: 1;
+	uint32_t reserved3 		: 2;
+	uint32_t SDIOEN 		: 1;
+	uint32_t SPI1EN 		: 1;
+	uint32_t SPI4EN 		: 1;
+	uint32_t SYSCFGEN 		: 1;
+	uint32_t reserved4 		: 1;
+	uint32_t TIM9EN 		: 1;
+	uint32_t TIM10EN 		: 1;
+	uint32_t TIM11EN 		: 1;
+	uint32_t reserved5 		: 13;
+ };
+} RCC_APB2REN_t;
 
 /*
  * GPIO PERIPHERAL CLOCK ENABLING OR DISABLING
