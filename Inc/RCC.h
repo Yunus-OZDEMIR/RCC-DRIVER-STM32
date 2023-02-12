@@ -115,14 +115,55 @@ typedef union {
 typedef union {
 	uint32_t RCC_AHB1RSTR;
   struct {
-	uint32_t GPIOARST : 1;
-	uint32_t GPIOBRST : 1;
-	uint32_t GPIOCRST : 1;
-	uint32_t GPIODRST : 1;
-	uint32_t GPIOERST : 1;
-
+	uint32_t GPIOARST 		: 1;
+	uint32_t GPIOBRST 		: 1;
+	uint32_t GPIOCRST 		: 1;
+	uint32_t GPIODRST 		: 1;
+	uint32_t GPIOERST 		: 1;
+	uint32_t reserved 		: 2;
+	uint32_t GPIOHRST 		: 1;
+	uint32_t reserved2 		: 4;
+	uint32_t CRCRST 		: 1;
+	uint32_t reserved3 		: 8;
+	uint32_t DMA1RST 		: 1;
+	uint32_t DMA2RST 		: 1;
+	uint32_t reserved4		: 9;
  };
 } RCC_AHB1RSTR_t;
+
+typedef union {
+	uint32_t RCC_AHB2RSTR;
+  struct {
+	uint32_t reserved 		: 7;
+	uint32_t OTGFSRST 		: 1;
+	uint32_t reserved2 		: 24;
+ };
+} RCC_AHB2RSTR_t;
+
+typedef union {
+	uint32_t RCC_APB1RSTR;
+  struct {
+	uint32_t TIM2RST 		: 1;
+	uint32_t TIM3RST 		: 1;
+	uint32_t TIM4RST 		: 1;
+	uint32_t TIM5RST 		: 1;
+	uint32_t reserved 		: 7;
+	uint32_t WWDGRST 		: 1;
+	uint32_t reserved2 		: 2;
+	uint32_t SPI2RST 		: 1;
+	uint32_t SPI3RST 		: 1;
+	uint32_t reserved3 		: 1;
+	uint32_t USART2RST 		: 1;
+	uint32_t reserved4 		: 3;
+	uint32_t I2C1RST 		: 1;
+	uint32_t I2C2RST 		: 1;
+	uint32_t I2C3RST 		: 1;
+	uint32_t reserved5 		: 4;
+	uint32_t PWRRST 		: 1;
+	uint32_t reserved6 		: 3;
+ };
+} RCC_APB1RSTR_t;
+
 
 
 /*
