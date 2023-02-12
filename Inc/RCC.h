@@ -60,6 +60,71 @@ typedef union {
   };
 }RCC_PLLCFGR_t;
 
+
+typedef union {
+  uint32_t CFGR;
+  struct {
+    uint32_t SW_0      	 : 1;
+    uint32_t SW_1        : 1;
+    uint32_t SWS_0       : 1;
+    uint32_t SWS_1       : 1;
+    uint32_t HPRE        : 4;
+    uint32_t reserved    : 2;
+    uint32_t PPRE_1      : 3;
+    uint32_t PPRE_2      : 3;
+    uint32_t RTCPPRE     : 5;
+    uint32_t MCO_1       : 2;
+    uint32_t I2SCC       : 1;
+    uint32_t MCO1_PRE    : 3;
+    uint32_t MCO2_PRE    : 3;
+    uint32_t MCO2      	 : 2;
+  };
+}RCC_CFGR_t;
+
+typedef union {
+	uint32_t RCC_CIR;
+  struct {
+    uint32_t LSIRDYF 	 	: 1;
+    uint32_t LSERDYF 	 	: 1;
+    uint32_t HSIRDYF 	 	: 1;
+    uint32_t HSERDYF 	 	: 1;
+    uint32_t PLLRDYF 	 	: 1;
+    uint32_t PLLI2SRDYF  	: 1;
+    uint32_t reserved    	: 1;
+    uint32_t CSSF 		 	: 1;
+    uint32_t LSIRDYIE    	: 1;
+    uint32_t LSERDYIE    	: 1;
+    uint32_t HSIRDYIE    	: 1;
+    uint32_t HSERDYIE    	: 1;
+    uint32_t PLLRDYIE    	: 1;
+    uint32_t PLLI2SRDYIE    : 1;
+    uint32_t reserved1		: 2;
+    uint32_t LSIRDYC 		: 1;
+    uint32_t LSERDYC 		: 1;
+    uint32_t HSIRDYC 		: 1;
+    uint32_t HSERDYC 		: 1;
+    uint32_t PLLRDYC 		: 1;
+    uint32_t PLLI2SRDYC     : 1;
+    uint32_t reserved2		: 1;
+    uint32_t CSSC 			: 1;
+    uint32_t reserved3		: 8;
+ };
+} RCC_CIR_t;
+
+
+typedef union {
+	uint32_t RCC_AHB1RSTR;
+  struct {
+	uint32_t GPIOARST : 1;
+	uint32_t GPIOBRST : 1;
+	uint32_t GPIOCRST : 1;
+	uint32_t GPIODRST : 1;
+	uint32_t GPIOERST : 1;
+
+ };
+} RCC_AHB1RSTR_t;
+
+
 /*
  * GPIO PERIPHERAL CLOCK ENABLING OR DISABLING
  */
