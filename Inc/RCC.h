@@ -165,6 +165,31 @@ typedef union {
 } RCC_APB1RSTR_t;
 
 
+typedef union {
+	uint32_t RCC_APB2RSTR;
+  struct {
+	uint32_t TIM1RST 		: 1;
+	uint32_t reserved 		: 3;
+	uint32_t USART1RST 		: 1;
+	uint32_t USART6RST 		: 1;
+	uint32_t reserved2 		: 2;
+	uint32_t ADC1RST 		: 1;
+	uint32_t reserved3 		: 2;
+	uint32_t SDIORST 		: 1;
+	uint32_t SPI1RST 		: 1;
+	uint32_t SPI4RST 		: 1;
+	uint32_t SYSCFGRST 		: 1;
+	uint32_t reserved4 		: 1;
+	uint32_t TIM9RST 		: 1;
+	uint32_t TIM10RST 		: 1;
+	uint32_t TIM11ST 		: 1;
+	uint32_t reserved 		: 13;
+
+ };
+} RCC_APB2RSTR_t;
+
+
+
 
 /*
  * GPIO PERIPHERAL CLOCK ENABLING OR DISABLING
