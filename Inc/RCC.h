@@ -242,7 +242,7 @@ typedef union {
 } RCC_APB1ENR_t;
 
 typedef union {
-	uint32_t RCC_APB2EN;
+	uint32_t RCC_APB2ENR;
   struct {
 	uint32_t TIM1EN 		: 1;
 	uint32_t reserved 		: 3;
@@ -261,7 +261,29 @@ typedef union {
 	uint32_t TIM11EN 		: 1;
 	uint32_t reserved5 		: 13;
  };
-} RCC_APB2REN_t;
+} RCC_APB2RENR_t;
+
+typedef union {
+	uint32_t RCC_AHB1LPENR;
+  struct {
+	uint32_t GPIOALPEN		: 1;
+	uint32_t GPIOBLPEN		: 1;
+	uint32_t GPIOCLPEN		: 1;
+	uint32_t GPIODLPEN		: 1;
+	uint32_t GPIOELPEN		: 1;
+	uint32_t reserved		: 2;
+	uint32_t GPIOHLPEN		: 1;
+	uint32_t reserved2		: 4;
+	uint32_t CRCLPEN		: 1;
+	uint32_t reserved3		: 2;
+	uint32_t FLITFLPEN		: 1;
+	uint32_t SRAM1LPEN		: 1;
+	uint32_t reserved4		: 4;
+	uint32_t DMA1LPEN		: 1;
+	uint32_t DMA2LPEN		: 1;
+	uint32_t reserved5		: 9;
+ };
+} RCC_AHB1LPENR_t;
 
 /*
  * GPIO PERIPHERAL CLOCK ENABLING OR DISABLING
