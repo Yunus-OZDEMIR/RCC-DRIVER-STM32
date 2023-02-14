@@ -225,7 +225,7 @@ typedef union {
 	uint32_t TIM4EN 		: 1;
 	uint32_t TIM5EN 		: 1;
 	uint32_t reserved 		: 7;
-	uint32_t WWDEN 			: 1;
+	uint32_t WWDGEN 		: 1;
 	uint32_t reserved2 		: 2;
 	uint32_t SPI2EN 		: 1;
 	uint32_t SPI3EN 		: 1;
@@ -285,6 +285,138 @@ typedef union {
  };
 } RCC_AHB1LPENR_t;
 
+
+typedef union {
+	uint32_t RCC_AHB2LPENR;
+  struct {
+	uint32_t reserved		: 7;
+	uint32_t OTGFSLPEN		: 1;
+	uint32_t reserved2		: 24;
+ };
+} RCC_AHB2LPENR_t;
+
+
+typedef union {
+	uint32_t RCC_APB1LPENR;
+  struct {
+	uint32_t TIM2LPEN 		: 1;
+	uint32_t TIM3LPEN 		: 1;
+	uint32_t TIM4LPEN 		: 1;
+	uint32_t TIM5LPEN 		: 1;
+	uint32_t reserved 		: 7;
+	uint32_t WWDGLPEN 		: 1;
+	uint32_t reserved2 		: 2;
+	uint32_t SPI2LPEN 		: 1;
+	uint32_t SPI3LPEN 		: 1;
+	uint32_t reserved3 		: 1;
+	uint32_t USART2LPEN 	: 1;
+	uint32_t reserved4 		: 3;
+	uint32_t I2C1LPEN 		: 1;
+	uint32_t I2C2LPEN 		: 1;
+	uint32_t I2C3LPEN 		: 1;
+	uint32_t reserved5 		: 4;
+	uint32_t PWRLPEN	 	: 1;
+	uint32_t reserved6 		: 3;
+ };
+} RCC_APB1LPENR_t;
+
+typedef union {
+	uint32_t RCC_APB2LPENR;
+  struct {
+	uint32_t TIM1LPEN 		: 1;
+	uint32_t reserved 		: 3;
+	uint32_t USART1LPEN 	: 1;
+	uint32_t USART6LPEN 	: 1;
+	uint32_t reserved2 		: 2;
+	uint32_t ADC1LPEN 		: 1;
+	uint32_t reserved3 		: 2;
+	uint32_t SDIOLPEN 		: 1;
+	uint32_t SPI1LPEN 		: 1;
+	uint32_t SPI4LPEN 		: 1;
+	uint32_t SYSCFGLPEN 	: 1;
+	uint32_t reserved4 		: 1;
+	uint32_t TIM9LPEN 		: 1;
+	uint32_t TIM10LPEN 		: 1;
+	uint32_t TIM11LPEN 		: 1;
+	uint32_t reserved5 		: 13;
+ };
+} RCC_APB2RLPENR_t;
+
+typedef union {
+	uint32_t RCC_BDCR;
+  struct {
+	uint32_t LSEON 			: 1;
+	uint32_t LSERDY 		: 1;
+	uint32_t LSEBYP		 	: 1;
+	uint32_t reserved		: 5;
+	uint32_t RTCSEL		 	: 2;
+	uint32_t reserved2		: 5;
+	uint32_t RTCEN		 	: 1;
+	uint32_t BDRST		 	: 1;
+	uint32_t reserved3		: 15;
+ };
+} RCC_BDCR_t;
+
+typedef union {
+	uint32_t RCC_CSR;
+  struct {
+	uint32_t LSION 			: 1;
+	uint32_t LSIRDY 		: 1;
+	uint32_t reserved		: 22;
+	uint32_t RMVF			: 1;
+	uint32_t BORRSTVF		: 1;
+	uint32_t PINRSTVF		: 1;
+	uint32_t PORRSTVF		: 1;
+	uint32_t STFRSTVF		: 1;
+	uint32_t IWDGRSTVF		: 1;
+	uint32_t WWDGRSTVF		: 1;
+	uint32_t LPWRRSTVF		: 1;
+ };
+} RCC_CSR_t;
+
+typedef union {
+	uint32_t RCC_SSCGR;
+  struct {
+	uint32_t MODPER 		: 13;
+	uint32_t INCSTEP 		: 15;
+	uint32_t RESERVED 		: 2;
+	uint32_t SPREADSEL 		: 1;
+	uint32_t SSCGEN 		: 1;
+ };
+} RCC_SSCGR_t;
+
+typedef union {
+	uint32_t RCC_PLLI2SCFGR;
+  struct {
+
+	uint32_t reversed 		: 6;
+	uint32_t PLLI2SN0 		: 1;
+	uint32_t PLLI2SN1 		: 1;
+	uint32_t PLLI2SN2 		: 1;
+	uint32_t PLLI2SN3 		: 1;
+	uint32_t PLLI2SN4 		: 1;
+	uint32_t PLLI2SN5 		: 1;
+	uint32_t PLLI2SN6 		: 1;
+	uint32_t PLLI2SN7 		: 1;
+	uint32_t PLLI2SN8 		: 1;
+	uint32_t reversed2 		: 13;
+	uint32_t PLLI2SR0 		: 1;
+	uint32_t PLLI2SR1 		: 1;
+	uint32_t PLLI2SR2 		: 1;
+	uint32_t reversed3 		: 1;
+ };
+} RCC_PLLI2SCFGR_t;
+
+typedef union {
+	uint32_t RCC_DCKCFGR;
+  struct {
+
+	uint32_t reversed 		: 24;
+	uint32_t TIMPRE			: 1;
+	uint32_t reversed2 		: 7;
+
+ };
+} RCC_DCKCFGR_t;
 /*
  * GPIO PERIPHERAL CLOCK ENABLING OR DISABLING
  */
